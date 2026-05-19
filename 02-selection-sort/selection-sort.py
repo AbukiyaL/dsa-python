@@ -8,8 +8,9 @@ def selection_sort(array):
             if array[j] < array[min_index]:
                 # updates when found one
                 min_index = j
-        # builds the sorted portion by swapping the min item with the item at current position
-        array[i], array[min_index] = array[min_index], array[i]
+    # builds the sorted portion by swapping the min item with the item at current position
+        if min_index != i:
+            array[i], array[min_index] = array[min_index], array[i]
 
     return array
 
